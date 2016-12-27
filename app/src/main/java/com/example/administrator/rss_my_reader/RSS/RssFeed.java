@@ -33,16 +33,30 @@ public class RssFeed {
         return rssItems.get(position);
     }
 
-    public List<HashMap<String,Objects>> getAllItems(){
-        List<HashMap<String,Objects>> data = new ArrayList<HashMap<String,Objects>>();
-        for (int i = 0;i<rssItems.size();i++){
-            HashMap<String,Objects> item = new HashMap<String,Objects>();
-            item.put(RssItem.TITLE,rssItems.get(i).getTitle());
-            item.put(RssItem.PUBDATE,rssItems.get(i).getPubdate());
+//    public List<HashMap<String,Objects>> getAllItems(){
+//        List<HashMap<String,Objects>> data = new ArrayList<HashMap<String,Objects>>();
+//        for (int i = 0;i<rssItems.size();i++){
+//            HashMap<String,Objects> item = new HashMap<String,Objects>();
+//            item.put(RssItem.TITLE,rssItems.get(i).getTitle());
+//            item.put(RssItem.PUBDATE,rssItems.get(i).getPubdate());
+//            data.add(item);
+//        }
+//        return data;
+//    }
+
+    public List<HashMap<String, Object>> getAllItems() {
+        List<HashMap<String, Object>> data = new ArrayList<HashMap<String, Object>>();
+        for (int i = 0; i < rssItems.size(); i++) {
+            HashMap<String, Object> item = new HashMap<String, Object>();
+            item.put(RssItem.TITLE, rssItems.get(i).getTitle());
+            item.put(RssItem.PUBDATE, rssItems.get(i).getPubdate());
             data.add(item);
         }
         return data;
+
     }
+
+
 
 
     public String getTitle(){
